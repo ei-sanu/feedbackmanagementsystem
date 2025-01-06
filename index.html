@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Teacher Feedback System</h1>
+        
+        <div id="startForm">
+            <div class="teacher-input">
+                <h3>Enter Teacher Names</h3>
+                <input type="text" placeholder="Teacher 1" class="teacher-name">
+                <input type="text" placeholder="Teacher 2" class="teacher-name">
+                <input type="text" placeholder="Teacher 3" class="teacher-name">
+                <input type="text" placeholder="Teacher 4" class="teacher-name">
+                <input type="text" placeholder="Teacher 5" class="teacher-name">
+            </div>
+            <button onclick="startFeedback()">Start Feedback</button>
+        </div>
+
+        <div id="feedbackForm" class="feedback-section">
+            <h2 id="currentTeacher"></h2>
+            
+            <div class="question">
+                <p>1. How well does the teacher explain concepts?</p>
+                <div class="stars" data-question="1">
+                    ★★★★★
+                </div>
+                <div class="improvement-box">
+                    <textarea placeholder="Please suggest improvements for teaching methods..."></textarea>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. How engaging are the classes?</p>
+                <div class="stars" data-question="2">
+                    ★★★★★
+                </div>
+                <div class="improvement-box">
+                    <textarea placeholder="Please suggest how to make classes more engaging..."></textarea>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. How well does the teacher handle doubts and questions?</p>
+                <div class="stars" data-question="3">
+                    ★★★★★
+                </div>
+                <div class="improvement-box">
+                    <textarea placeholder="Please suggest improvements for doubt handling..."></textarea>
+                </div> 
+            </div>
+
+            <div class="question">
+                <p>4. How fair is the teacher's evaluation method?</p>
+                <div class="stars" data-question="4">
+                    ★★★★★
+                </div>
+                <div class="improvement-box">
+                    <textarea placeholder="Please suggest improvements for evaluation methods..."></textarea>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button onclick="previousTeacher()">Previous</button>
+                <button onclick="nextTeacher()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
